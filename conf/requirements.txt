@@ -1,0 +1,3 @@
+robotframework==4.1.3
+robotframework-browser==11.4.0
+rpaframework==13.0.0
