@@ -4,12 +4,22 @@ Library    RPA.Browser.Playwright
 *** Test Cases ***
 First Filter Test
     [Setup]    Visit Setup
-    Sleep    2
     Click    (//*[@id="equipments"])[2]
     Wait For Elements State    id=id_category    visible
     Fill Text    id=id_name    Umbrella
     Select Options By    id=id_category    label    Golf
     Click    //button[text()="Filter equipments"]
+    ${umbrellas}=    Get Element Count    //div[@id="equipments-table"]//tbody/tr
+    Should Be Equal    ${umbrellas}    3
+
+Second Filter Test
+    [Setup]    Visit Setup
+    Click    (//*[@id="equipments"])[2]
+    Wait For Elements State    id=id_category    visible
+    Fill Text    id=id_name    Umbrella
+    Select Options By    id=id_category    label    Golf
+    Click    //button[text()="Filter equipments"]
+    Wait Until Network Is Idle
     ${umbrellas}=    Get Element Count    //div[@id="equipments-table"]//tbody/tr
     Should Be Equal    ${umbrellas}    3
 
