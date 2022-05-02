@@ -19,7 +19,7 @@ Second Filter Test
     Fill Text    id=id_name    Umbrella
     Select Options By    id=id_category    label    Golf
     Click    //button[text()="Filter equipments"]
-    ${states}=    Get Element States    //span[contains(text(), "Loading equipments")]
+    Wait For Elements State    //span[contains(text(), "Loading equipments")]    hidden
     ${umbrellas}=    Get Element Count    //div[@id="equipments-table"]//tbody/tr
     Should Be Equal    ${umbrellas}    3
 
