@@ -31,6 +31,7 @@ Login Test
     Fill Text    id=id_password1    m31KÄL4#
     Fill Text    id=id_password2    m31KÄL4#
     Click    //button[text()="Sign up"]
+    Wait For Elements State    //h3[text()="Equipments"]    visible
 
 *** Keywords ***
 Test Setup
