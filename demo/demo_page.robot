@@ -23,13 +23,14 @@ Second Filter Test
     Should Be Equal As Integers    ${umbrellas}    3
 
 Login Test
-    Click    id=login
-    Wait For Elements State    id=id_username    visible
-    Fill Text    id=id_username    timmy
-    Fill Text    id=id_password    timmy
-    Click    //button[text()="Log in"]
-    Wait For Elements State    //h1[text()="The Rental Store"]
-    Click    (//*[@id="equipments"])[2]
+    Click    id=signup
+    Wait For Elements State    //button[text()="Sign up"]    visible
+    Fill Text    id=id_first_name    Matti
+    Fill Text    id=id_last_name    Meikäläinen
+    Fill Text    id=id_username    matt!m
+    Fill Text    id=id_password1    m31KÄL4#
+    Fill Text    id=id_password2    m31KÄL4#
+    Click    //button[text()="Sign up"]
 
 *** Keywords ***
 Test Setup
