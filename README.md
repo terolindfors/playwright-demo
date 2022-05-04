@@ -16,3 +16,8 @@ Simple robotframework tests for demoing the use of Playwright traces with Browse
 - Check that you have at least one of these installed: Chromium, Firefox, WebKit
 
   chromium can be installed in Ubuntu e.g. with `sudo apt install --assume-yes chromium-browser`
+
+## Viewing traces with Trace viewer
+- After demo_page.robot suite has been run, you can view the trace of each robot test with
+
+ `rfbrowser show-trace -F <output_path>/Demo_Page_<test>_robot_trace`
